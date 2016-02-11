@@ -1,0 +1,28 @@
+{
+  "name": "bank_ocr_kata",
+  "version": "1.0.0",
+  "description": "from http://codingdojo.org/cgi-bin/index.pl?KataBankOCR",
+  "main": "bank-ocr",
+  "scripts": {
+    "test": "mocha -w"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/morrisjosephd/BankOCRKata.git"
+  },
+  "keywords": [
+    "kata",
+    "javascript",
+    "bankocr"
+  ],
+  "author": "Joseph Morris <morris.josephd@gmail.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/morrisjosephd/BankOCRKata/issues"
+  },
+  "homepage": "https://github.com/morrisjosephd/BankOCRKata#readme",
+  "devDependencies": {
+    "chai": "^3.5.0",
+    "mocha": "^2.4.5"
+  }
+}
