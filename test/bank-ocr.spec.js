@@ -6,7 +6,22 @@ describe ('A reading machine', function () {
 
   describe('scans a file', function() {
 
-    it('should parse zeros');
+    //it('should parse zeros', function() {
+    //  var fileToParse = fs.readFileSync('./bank-ocr.txt', 'UTF-8');
+    //  var newArray = subject.parse(fileToParse);
+    //  console.log(newArray);
+    //  subject.parse(fileToParse).should.eq(0);
+    //});
+
+    it('should parse zero', function () {
+      var stringToParse =
+        " _ " +
+        "| |" +
+        "|_|";
+      var newArray = subject.parse(stringToParse);
+      console.log(newArray);
+      subject.parse(stringToParse).should.eq(0);
+    });
     it('should parse ones');
     it('should parse twos');
     it('should parse threes');
