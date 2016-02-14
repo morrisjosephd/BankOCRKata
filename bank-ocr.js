@@ -1,12 +1,18 @@
 function parse (fileToParse) {
-  var x = [];
-  for (var i = 0; i < 9; i++) {
-    var char = fileToParse.charAt(i);
-    x.push(char);
+  var lines = fileToParse.split('\n');
+  var lineLength = lines[ 0 ].length;
+  var symbol = '';
+  var accountNumber = [];
+
+  for (var i = 0; i < lineLength; i += 3) {
+    for (var line = 0; line < 3; line++) {
+      symbol += lines[ line ].substr(i, 3);
+    }
+    accountNumber.push(symbolToIntegerMap[ symbol ]);
+    symbol = '';
   }
-  x = x.toString();
-  x = x.replace(/,/g, '');
-  return symbolToIntegerMap[x];
+
+  return accountNumber.join('');
 
 }
 
