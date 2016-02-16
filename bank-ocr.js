@@ -12,8 +12,21 @@ function parse (fileToParse) {
     symbol = '';
   }
 
-  return accountNumber.join('');
+  if (isValid(accountNumber)) {
+    return accountNumber.join('');
+  }
+  return accountNumber.join('') + ' ERR';
+}
 
+function isValid (accountNumber) {
+  var checkSum = 0;
+
+  var counter = 9;
+  for (var i = 0; i < accountNumber.length; i++) {
+    checkSum += counter * accountNumber[ i ];
+    counter--;
+  }
+  return checkSum % 11 === 0;
 }
 
 const symbolToIntegerMap = {
